@@ -6,6 +6,7 @@ const authRoute = require('./routes/auth')
 const userRoute = require('./routes/users')
 const movieRoute = require('./routes/movies')
 const listRoute = require('./routes/lists')
+const jstUserRoute = require('./routes/jstUser')
 const dotenv = require("dotenv")
 
 dotenv.config()
@@ -21,6 +22,7 @@ app.use('/api/auth', authRoute)
 app.use('/api/users', userRoute)
 app.use('/api/movies', movieRoute)
 app.use('/api/lists', listRoute)
+app.use('/api/jstuser', jstUserRoute)
 
 app.listen(2580, () => {
     console.log("Backend server is running!");
