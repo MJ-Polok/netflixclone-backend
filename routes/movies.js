@@ -84,7 +84,7 @@ router.get('/random', async (req, res) => {
 })
 
 // Get All
-router.get('/', async (req, res) => {
+router.get('/', verify, async (req, res) => {
     if (req.user.isAdmin) {
         try {
             const movies = await Movie.find();
